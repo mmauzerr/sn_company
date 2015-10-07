@@ -28,31 +28,37 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'S&N COMPANY',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-    ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = [
-            'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-            'url' => ['/site/logout'],
-            'linkOptions' => ['data-method' => 'post']
+     // ['label' => 'Home', 'url' => ['/site/index']],
+        ['label' => 'O Nama', 'url' => ['/site/about']],
+        ['label' => 'Proizvodi', 'items' => [
+            ['label' => 'Svadbeni Accessoar', 'url' => ['/proizvodi/svadbeni_accessoar']],
+            ['label' => 'Drveni Suveniri', 'url' => ['/proizvodi/drveni_suveniri']],
+            ['label' => 'CNC 88', 'url' => ['proizvodi/cnc_88']],
+        ]],
+        ['label' => 'Kontakt', 'url' => ['/site/contact']],
         ];
-    }
+    //if (Yii::$app->user->isGuest) {
+    //    $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
+    //    $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+    //} else {
+    //    $menuItems[] = [
+    //        'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+    //        'url' => ['/site/logout'],
+    //        'linkOptions' => ['data-method' => 'post']
+    //    ];
+    //}
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => $menuItems,
     ]);
+
     NavBar::end();
     ?>
 
@@ -67,7 +73,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; mmauzerr <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
