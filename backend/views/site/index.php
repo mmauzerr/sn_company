@@ -1,5 +1,5 @@
 <?php
-
+use yii\helpers\Html;
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
@@ -7,15 +7,18 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
+        <h1>Wellcome!</h1>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+        <p class="lead">Now you can start entering data.</p>
+        <?= Html::a('<h5>CREATE PRODUCT</h5>','product/create',[
+            'class' => 'btn btn-lg btn-info',
+            'style' => 'box-shadow: 1px 2px 1px gray;margin-top: 20px;padding : 5px 15px'
+        ])?>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
     </div>
 
     <div class="body-content">
-
+<!---------------------------------------------------------------------------------------------------------------
         <div class="row">
             <div class="col-lg-4">
                 <h2>Heading</h2>
@@ -48,6 +51,6 @@ $this->title = 'My Yii Application';
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
             </div>
         </div>
-
+-------------------------------------------------------------------------------------------------------------------->
     </div>
 </div>
