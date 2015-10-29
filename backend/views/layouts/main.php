@@ -42,8 +42,12 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
         $menuItems = [
-            ['label' => 'Create Product', 'url' => ['/product/index']],
-            ['label' => ''],
+            ['label' => 'Assessoris View', 'url' => ['#']],
+            ['label' => 'Wooden Product', 'url' => ['#']],
+            ['label' => 'CNC 88', 'url' => ['#']],
+            ['label' => 'Create Product', 'url' => ['/product/create']],
+            ['label' => 'Category', 'url' => ['/category/index']],
+            ['label' => ''],['label' => ''],['label' => ''],['label' => ''],
         ];
         $menuItems[] = [
             'label' => 'Logout (' . Yii::$app->user->identity->username . ')',

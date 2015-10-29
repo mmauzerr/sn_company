@@ -2,16 +2,20 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
-use common\models\SignupForm;
 use frontend\models\ContactForm;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use common\models\MainGallery;
+use common\models\ProductGallery;
+use common\models\SignupForm;
+use common\models\LoginForm;
+use common\models\Contact;
+use common\models\AboutUs;
 
 /**
  * Site controller
@@ -65,6 +69,8 @@ class SiteController extends Controller
         ];
     }
 
+
+
     /**
      * Displays homepage.
      *
@@ -72,7 +78,23 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $mainGallery = MainGallery::find()->andWhere(['status'=>1])->one();
+        $aboutUs = AboutUs::find()->one();
+        $productGallery = ProductGallery::find()->andWhere(['status'=>1])->all();
+        $contact = Contact::find()->one();
+    //    $partners = Partner::find()->andWhere(['status'=>'1'])->all();
+    //    $history = History::find()->andWhere(['status'=>1])->one();
+    //    $servicing = Servicing::find()->andWhere(['status'=>1])->one();
+
+        return $this->render('index',[
+            'mainGallery'=>$mainGallery,
+            'aboutUs'=>$aboutUs,
+            'productGallery'=>$productGallery,
+            'contact'=>$contact,
+        //    'partners'=>$partners,
+        //    'history'=>$history,
+         //   'servicing'=>$servicing
+        ]);
     }
 
     /**

@@ -17,7 +17,10 @@
         "php": ">=5.4.0",
         "yiisoft/yii2": ">=2.0.6",
         "yiisoft/yii2-bootstrap": "*",
-        "yiisoft/yii2-swiftmailer": "*"
+        "yiisoft/yii2-swiftmailer": "*",
+        "zxbodya/yii2-elfinder": "*@dev",
+        "uran1980/yii2-translate-panel": "dev-master",
+        "2amigos/yii2-ckeditor-widget" : "~1.0"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

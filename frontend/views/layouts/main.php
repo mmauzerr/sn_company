@@ -1,14 +1,9 @@
 <?php
+use yii\helpers\Html;
+use frontend\assets\AppAsset;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-
-use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
-use frontend\assets\AppAsset;
-use common\widgets\Alert;
 
 AppAsset::register($this);
 ?>
@@ -20,65 +15,22 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,600,600italic,400italic,800,800italic&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
     <?php $this->head() ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
-
-<div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => 'S&N COMPANY',
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    $menuItems = [
-     // ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'O Nama', 'url' => ['/site/about']],
-        ['label' => 'Proizvodi', 'items' => [
-            ['label' => 'Svadbeni Accessoar', 'url' => ['/proizvodi/svadbeni_accessoar']],
-            ['label' => 'Drveni Suveniri', 'url' => ['/proizvodi/drveni_suveniri']],
-            ['label' => 'CNC 88', 'url' => ['proizvodi/cnc_88']],
-        ]],
-        ['label' => 'Kontakt', 'url' => ['/site/contact']],
-        ];
-    //if (Yii::$app->user->isGuest) {
-    //    $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-    //    $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    //} else {
-    //    $menuItems[] = [
-    //        'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-    //        'url' => ['/site/logout'],
-    //        'linkOptions' => ['data-method' => 'post']
-    //    ];
-    //}
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
-    ]);
-
-    NavBar::end();
-    ?>
-
+<?= $content?>
+<footer class="footer text-lg" style="background-color: #818181; padding: 2% 0; font-size:1.3em">
     <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
-</div>
-
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; mmauzerr <?= date('Y') ?></p>
+        <p class="pull-left">&copy; S&N Company <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
 </footer>
-
 <?php $this->endBody() ?>
 </body>
 </html>
