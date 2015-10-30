@@ -42,6 +42,16 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
         $menuItems = [
+            ['label' => 'content', 'items' => [
+                ['label'=> 'O Nama', 'url' => ['content/about-us']],
+                ['label'=> 'Kontakt', 'url' => ['content/contact']],
+                ['label'=> 'Kreiraj', 'url' => ['content/create']],
+            //   ['label'=> 'Galerija - items', 'url' => ['content/galleryitems']],
+                ['label'=> 'Kreiraj Glavnu Galeriju', 'url' => ['/content/create-main-gallery']],
+                ['label'=> 'Glavna Galerija - index', 'url' => ['content/main-gallery']],
+                ['label'=> 'Glavna Galerija - view', 'url' => ['content/main-gallery']],
+            //    ['label'=> 'Update', 'url' => ['content/update']],
+            ]],
             ['label' => 'Assessoris View', 'url' => ['#']],
             ['label' => 'Wooden Product', 'url' => ['#']],
             ['label' => 'CNC 88', 'url' => ['#']],

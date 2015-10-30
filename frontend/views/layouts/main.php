@@ -24,11 +24,9 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 <?= $content?>
-<footer class="footer text-lg" style="background-color: #818181; padding: 2% 0; font-size:1.3em">
+<footer class="footer text-lg" style="background-color: #a1a1a1; padding: 2% 0; font-size:1.3em">
     <div class="container">
-        <p class="pull-left">&copy; S&N Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="text-center" style="color: whitesmoke">&copy; S&N Company <?= date('Y') ?></p>
     </div>
 </footer>
 <?php $this->endBody() ?>

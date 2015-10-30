@@ -18,11 +18,11 @@ use yii\helpers\Url;
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#" class="navbar-brand" style="margin-left: -30px"><img src="/images/sn_logo.png" alt="sn_logo"/></a>
+                    <a href="#" class="navbar-brand" style="margin-left: -40px"><img src="/images/sn_logo.png" alt="sn_logo"/></a>
 
                 </div>
                 <div class="navbar-collapse collapse" id="templatemo-nav-bar">
-                    <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;">
+                    <ul class="nav navbar-nav navbar-right" style="margin-top: 30px;">
                         <li class="active"><a href="#templatemo-carousel" style="text-transform: uppercase"><?php echo Yii::t('app','Početna')?></a></li>
                         <li><a href="#templatemo-about" style="text-transform: uppercase"><?php echo Yii::t('app','O nama')?></a></li>
                         <?php if(!empty($history)){?>
@@ -47,7 +47,7 @@ use yii\helpers\Url;
 </div>
 
 <div style="width: 100%;text-align: center;height:0">
-    <h3 id="header" style="font-family: 'Great Vibes', cursive;font-size: 82px"><?php echo Yii::t('app','S&N Company - širok spektar usluga');?></h3>
+    <h4 id="header" style="font-family: Lora;text-shadow: 1px 1px 5px black;font-style:italic;font-size: 62px"><?php echo Yii::t('app','Nudimo vam širok spektar usluga');?></h4>
 </div>
 
 
@@ -230,14 +230,14 @@ use yii\helpers\Url;
             </div>
 
             <div class="col-md-8">
-                <div class="templatemo-contact-map" id="map-canvas"> </div>
+                <div class="templatemo-contact-map" id="map-canvas" style="border: 1px solid #a3a3a3"> </div>
                 <div class="clearfix"></div>
 
             </div>
             <div class="col-md-4 contact_right"><br />
                 <?php if(!empty($contact)){?>
-                   <p><img src="../images/location.png" alt="icon 1" /><?php echo Yii::t('app',$contact->title)?></p>
-                    <p><img src="../images/phone1.png"  alt="icon 2" /><?php echo Yii::t('app',$contact->content) ?></p>
+                   <p><strong>Adresa :</strong><img src="../images/location.png" alt="icon 1" /><?php echo Yii::t('app',$contact->title)?></p>
+                    <p><strong>Telefon :</strong><img src="../images/phone1.png"  alt="icon 2" /><?php echo Yii::t('app',$contact->content) ?></p>
 
                     <br /><!--                    <p><img src="../images/facebook.png"  alt="" /><a href="--><?php //echo $contact->excerpt?><!--" style="color:rgb(51, 51, 51);margin-left:3px;" target="_blank">--><?php //echo Yii::t('app','design studio "Andjelika"')?><!--</a></p>-->
 
