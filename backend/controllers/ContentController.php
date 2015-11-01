@@ -48,7 +48,7 @@ class ContentController extends Controller
                     'root' => Yii::getAlias('@webroot') . '/uploads/',
                     'URL' => Yii::getAlias('@web') . '/uploads/',
                     'rootAlias' => 'Home',
-                    'mimeDetect' => 'none'
+                    'mimeDetect' => 'none',
                 )
             ),
         ];

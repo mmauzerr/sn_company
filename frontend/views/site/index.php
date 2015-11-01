@@ -3,9 +3,6 @@
 use yii\helpers\Url;
 
 ?>
-<style>
-
-</style>
 <div class="templatemo-top-menu" id="templatemo-top" >
     <div class="container" style="">
         <!-- Static navbar -->
@@ -90,14 +87,14 @@ use yii\helpers\Url;
     </div>
         <a class="left carousel-control" href="#templatemo-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
         <a class="right carousel-control" href="#templatemo-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-    </div><!-- /#templatemo-carousel -->
+    </div><hr /><!-- /#templatemo-carousel -->
 </div>
 
 <div class="templatemo-welcome" id="templatemo-welcome">
-    <div class="container">
+    <div class="container" style="margin-top:-20px">
         <div class="templatemo-slogan text-center">
-            <span style="font-family: 'Impact, Charcoal, sans-serif';font-size: 72px"><?php echo Yii::t('app','C & N COMPANY')?><br />
-            <span style="font-family: 'Impact, Charcoal, sans-serif';font-size: 82px"><?php echo Yii::t('app','Dobrodošli')?>
+            <span class="font-effect-3d-float" style="color:#666;font-family: Robot"><?php echo Yii::t('app','C & N  COMPANY')?><br />
+            <span class="font-effect-3d-float" style="color:#666;font-family: Robot;font-size: 70px"><?php echo Yii::t('app','Dobrodošli')?>
         </div>
     </div>
 </div>

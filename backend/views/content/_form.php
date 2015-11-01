@@ -21,8 +21,9 @@ use yii\widgets\ActiveForm;
 
     <?php echo $form->field($model, 'content')->widget(
         zxbodya\yii2\elfinder\ElFinderInput::className(),
-        ['connectorRoute' => 'content/connector',]
-    ) ?>
+            ['connectorRoute' => 'content/connector']
+        )
+    ?>
 
 
     <div class="form-group">

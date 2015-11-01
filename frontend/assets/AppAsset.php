@@ -22,8 +22,8 @@ class AppAsset extends AssetBundle
     public $css = [
         'js/colorbox/colorbox.css',
         'css/templatemo_style.css',
-
     ];
+
     public $js = [
         'js/bootstrap.min.js',
         'js/stickUp.min.js',
