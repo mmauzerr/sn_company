@@ -33,7 +33,7 @@ use yii\helpers\Url;
                         <li>
                             <select id="language" style="background: transparent;margin-top:9px;font-size:12px;margin-left:3px;">
                                 <option value="sr" <?php echo Yii::$app->language == 'sr'? 'selected':'' ?>>SR</option>
-                                <option value="en" <?php echo Yii::$app->language == 'en'? 'selected':'' ?>>EN</option>
+                                <option value="en" <?php echo Yii::$app->language == 'ru'? 'selected':'' ?>>RU</option>
                             </select>
                         </li>
                     </ul>
